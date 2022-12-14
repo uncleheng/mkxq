@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+
+android{
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+        }
+    }
+}
+dependencies {
+    implementation project(path: ':common')
+    implementation rootProject.ext.commonDeps.baseAdapter
+    implementation rootProject.ext.commonDeps.ijkJava
+    implementation rootProject.ext.commonDeps.ijkArm
+    implementation rootProject.ext.commonDeps.ijkExo
+    implementation rootProject.ext.commonDeps.ijk64
+    implementation rootProject.ext.commonDeps.jiaozi
+    implementation rootProject.ext.commonDeps.glide
+}

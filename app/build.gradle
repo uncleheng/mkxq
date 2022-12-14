@@ -1,0 +1,15 @@
+apply plugin: 'com.android.application'
+apply from: '../dependencies.gradle'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    defaultConfig {
+        applicationId "com.mkxq.lite"
+    }
+
+}
+
+dependencies {
+    implementation project(path: ':common')
+    implementation project(path: ':business')
+}

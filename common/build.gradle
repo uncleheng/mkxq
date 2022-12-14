@@ -1,0 +1,15 @@
+apply plugin: 'com.android.library'
+apply from: '../dependencies.gradle'
+
+android {
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+        }
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.network
+    api rootProject.ext.commonDeps.autosize
+}
